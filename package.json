@@ -1,0 +1,40 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "engines": {
+    "node": "14.13.1"
+  },
+  "client": "file:client",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "chalk": "^4.1.0",
+    "config": "^3.1.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.16.4",
+    "express-fileupload": "^1.2.0",
+    "express-validator": "^5.3.1",
+    "fast2sms": "^1.0.3",
+    "jsonwebtoken": "^8.5.1",
+    "node-sass": "^4.14.1",
+    "mongoose": "^5.11.15",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.4.17",
+    "shortid": "^2.2.15"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "nodemon": "^2.0.4"
+  },
+  "scripts": {
+    "start": "node server",
+    "server": "nodemon server",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
